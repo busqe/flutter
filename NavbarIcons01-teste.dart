@@ -1,5 +1,7 @@
  import 'package:flutter/material.dart';
-
+/*
+barra superior do Flutter com icones que alinham a esquerda e direita
+*/
 
 class BasicAppBarSample extends StatefulWidget {
   @override
