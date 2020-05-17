@@ -1,7 +1,5 @@
  import 'package:flutter/material.dart';
-/*
-barra superior do Flutter com icones que alinham a esquerda e direita
-*/
+
 
 class BasicAppBarSample extends StatefulWidget {
   @override
@@ -53,7 +51,7 @@ class _HomePage extends State<BasicAppBarSample> {
                         IconButton(
                           icon: Icon(Icons.menu),
                           onPressed: () {
-                            _select(choices[0]);
+                            _select(choices[3]);
                           },
                         ),
                         Image.asset(
@@ -124,6 +122,7 @@ class ChoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.headline6;
+    final TextStyle textLegend = DefaultTextStyle.of(context).style.apply(fontSizeFactor: 1);
     return Card(
       color: Colors.white,
       child: Center(
@@ -133,6 +132,32 @@ class ChoiceCard extends StatelessWidget {
           children: <Widget>[
             Icon(choice.icon, size: 80.0, color: textStyle.color),
             Text(choice.title, style: textStyle),
+            Text('Ops erro ao carregar!', style: textLegend),
+       
+
+SizedBox.fromSize(
+  size: Size(56, 56), // button width and height
+  child: ClipOval(
+    child: Material(
+      color: Colors.orange, // button color
+      child: InkWell(
+        splashColor: Colors.green, // splash color
+        onTap: () {
+          
+        }, // button pressed
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(Icons.refresh), // icon
+          ],
+        ),
+      ),
+    ),
+  ),
+)
+
+
+
           ],
         ),
       ),
