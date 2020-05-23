@@ -95,8 +95,9 @@ class ProdutoDetalhe extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  buttonMedium1(label:btShare),
-                  buttonMedium2(label:btFavorite)]),
+                  buttonMedium(label:btShare, icon:Icons.share),
+                  buttonMedium(label:btFavorite, icon:Icons.favorite),
+                  ]),
           ),
           buildColumn2(), // Descricao
           buildColumn3(), // Tamanho - Titulos
@@ -649,7 +650,7 @@ class SlidePhotos extends StatelessWidget {
   }
 }
 
-Row buttonMedium1({Key key, label}) {
+Row buttonMedium({Key key, label, icon:Icon}) {
   return Row(children: <Widget>[
     Padding(
       padding: EdgeInsets.all(5.0),
@@ -664,7 +665,7 @@ Row buttonMedium1({Key key, label}) {
           child: Row(
             children: <Widget>[
               Icon(
-                Icons.reply ,
+                icon ,
                 size: 15.0,
                 color: Colors.black45,
               ),
@@ -683,42 +684,7 @@ Row buttonMedium1({Key key, label}) {
   ]);
 }
 
-Row buttonMedium2({Key key, label}) {
-  return Row(children: <Widget>[
-    Padding(
-      padding: EdgeInsets.all(5.0),
-      child: ButtonTheme(
-        minWidth: 140.0,
-        height: 35.0,
-        child: RaisedButton(
-          elevation: 1.0,
-          shape: Border.all(width: 1.0, color: Colors.black12),
-          color: Colors.white,
-          onPressed: () {},
-          child: Row(
-            children: <Widget>[
-              Icon(
-                Icons.favorite,
-                size: 15.0,
-                color: Colors.black45,
-              ),
-              Text(
-                label,
-                style: TextStyle(
-                    fontWeight: FontWeight.normal,
-                    fontSize: 12,
-                    color: Colors.black87),
-              ),
-            ],
-          ),
-        ),
-      ),
-    ),
-  ]);
-}
-
-
-
+ 
 
 
 
