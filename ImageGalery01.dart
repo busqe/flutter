@@ -316,12 +316,14 @@ class _AlertMessgeInfoState extends State<AlertMessgeInfo> {
                     onPressed: () {
                       
                     setState(() {  });
-                          // userAction();
-                       
-                        // print('EXIBIR=' + show.toString());
-                        // Navigator.of(context, rootNavigator: true).pop();
-                    
-                      //_showToast({Key key, message, context})
+                           userAction();
+
+                        print(' ------- AlertMessgeInfo');
+                        print(' userID = ' + userID);
+                        print(' buttonText = ' + buttonText);
+                        print(' alertMessage = ' + alertMessage);
+                        print(' buttonShow = ' + buttonShow.toString());
+
                     },
                     shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0),
